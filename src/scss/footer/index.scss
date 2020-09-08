@@ -71,15 +71,41 @@ body {
         .item-value {
             width: 27%;
         }
+        tbody {
+            width: 100%;
+            display: block;
+        }
+        tbody tr {
+            height: 53px;
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        tbody tr td {
+            display: inline-flex;
+            height: 53px;
+            align-items: center;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 21px;
+            color: #000000;
+        }
+        tbody tr td span {
+            margin-right: 4px;
+            width: 16px;
+            height: 16px;
+            background: #98B2D1;
+            border-radius: 2px;
+        }
     }
     &__checkboxes {
         display: block;
         border: 1px solid rgba(0, 0, 0, 0.08);
         height: 32px;
         &-item {
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             padding: 0;
             margin: 0;
             height: 100%;
@@ -90,11 +116,11 @@ body {
             text-transform: uppercase;
             color: #000000;
             input {
-              margin-right: 4px;
+                margin-right: 4px;
             }
         }
         &-item:not(:last-child) {
-          border-right: 1px solid rgba(0, 0, 0, 0.08);
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
         }
     }
 }
