@@ -43,7 +43,7 @@
 
       <div class="pantone-colors__top">
         <h2 class="pantone-colors__title">Pantone colors</h2>
-        <button class="pantone-colors__reset"><i></i>Reset</button>
+        <button id="jsBtnReset" class="pantone-colors__reset"><i></i>Reset</button>
       </div><!-- /.pantone-colors__top -->
 
 
@@ -51,36 +51,38 @@
         <thead>
           <tr class="pantone-colors__checkboxes">
             <th class="pantone-colors__checkboxes-item item-id">
-              <input id="itemId" type="checkbox" checked="checked">
+              <input class="js-checkbox" data-target="item-id" id="itemId" type="checkbox" checked="checked">
               <label for="itemId">Id</label>
             </th>
             <th class="pantone-colors__checkboxes-item item-name">
-              <input id="itemName" type="checkbox" checked="checked">
+              <input class="js-checkbox" data-target="item-name" id="itemName" type="checkbox" checked="checked">
               <label for="itemName">Name</label>
             </th>
             <th class="pantone-colors__checkboxes-item item-year">
-              <input id="itemYear" type="checkbox" checked="checked">
+              <input class="js-checkbox" data-target="item-year" id="itemYear" type="checkbox" checked="checked">
               <label for="itemYear">Year</label>
             </th>
             <th class="pantone-colors__checkboxes-item item-color">
-              <input id="itemColor" type="checkbox" checked="checked">
+              <input class="js-checkbox" data-target="item-color" id="itemColor" type="checkbox" checked="checked">
               <label for="itemColor">Color</label>
             </th>
             <th class="pantone-colors__checkboxes-item item-value">
-              <input id="itemValue" type="checkbox" checked="checked">
+              <input class="js-checkbox" data-target="item-value" id="itemValue" type="checkbox" checked="checked">
               <label for="itemValue">Pantone value</label>
             </th>
           </tr><!-- /.pantone-colors__checkboxes -->
         </thead>
 
-        <tbody>
+        <tbody id="jsTableTbody">
+
           <tr>
             <td class="item-id">1</td>
             <td class="item-name">Cerulean</td>
             <td class="item-year">2000</td>
-            <td class="item-color"><span></span>#98B2D1</td>
+            <td class="item-color"><span style="background-color:#98B2D1"></span>#98B2D1</td>
             <td class="item-value">15-4020</td>
           </tr>
+          
         </tbody>
 
       </table>
