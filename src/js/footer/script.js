@@ -7,7 +7,8 @@ $(function() {
   let resultTableHtml = '';
   
 
-  $(window).on('load', function() {
+
+  // $(window).on('load', function() {
     //вывод данных из json в таблицу
     $.get(jsonUrl, function(data) {
       jsonData = data.data;
@@ -50,15 +51,15 @@ $(function() {
       }
       $('#jsTableTbody').html(resultTableHtml);
     },'json');
-  });
+  // });
 
 
 
   //скрытие столбцов при клике на checkbox
   $('.js-checkbox').on('click', function() {
-    if ( !$(this)[0].checked ) { //если снят checkbox      
+    if ( !$(this)[0].checked ) {//если снят checkbox      
       var targetClass = $(this).data('target');
-      $('.'+targetClass).remove();
+      $('.'+targetClass).addClass('hidden');
       $('#jsBtnReset').addClass('acts');
       Cookies.set(targetClass, 'hidden');
     }
@@ -68,13 +69,14 @@ $(function() {
 
   //reset кнопки механизм
   $('#jsBtnReset').on('click', function() {
-    $('#jsBtnReset').removeClass('acts');    
+    $('#jsBtnReset').removeClass('acts');
+    $('input:checkbox').prop('checked', true);//добавим состояние checked для всех чекбоксов 
     Cookies.set('item-id', '');
     Cookies.set('item-name', '');
     Cookies.set('item-year', '');
     Cookies.set('item-color', '');
     Cookies.set('item-value', '');
-    location.reload();
+    window.location.reload();
   });
 
 
