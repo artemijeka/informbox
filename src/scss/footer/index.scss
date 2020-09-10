@@ -1,18 +1,21 @@
 body {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ecf0f3;
     height: 100vh;
+    width: 100%;
     font-family: Segoe UI;
     font-style: normal;
+    @media (max-width: 464px) {
+        justify-content: flex-start;
+    }
 }
 
 .pantone-colors {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     max-width: 640px;
     width: 100%;
+    min-width: 464px;
     height: auto;
     background-color: #fff;
     &__checkboxes {

@@ -12,7 +12,6 @@ $(function() {
     $.get(jsonUrl, function(data) {
       jsonData = data.data;
       for (var item of jsonData) {
-        let nameCapitalized = item.name.charAt(0).toUpperCase() + item.name.slice(1)
         resultTableHtml += '<tr>';
 
         if ( Cookies.get('item-id') !== 'hidden') {
@@ -22,6 +21,7 @@ $(function() {
           $('#jsBtnReset').addClass('acts');
         }
         if ( Cookies.get('item-name') !== 'hidden') {
+          let nameCapitalized = item.name.charAt(0).toUpperCase() + item.name.slice(1);
           resultTableHtml += '<td class="item-name">'+nameCapitalized+'</td>';
         } else {
           $('th.item-name').remove();

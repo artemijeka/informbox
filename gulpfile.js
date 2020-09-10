@@ -317,7 +317,7 @@ gulp.task('run_server', function (done) {
     done();
 });
 
-gulp.task('default', gulp.series('clean_dev', /* 'pug' ,*/ 'minhtml', 'move_files', 'scss_vendor_header', 'scss_vendor_footer', 'scss_header', 'scss_footer', 'js_vendor_header', 'js_vendor_footer', 'js_header', 'js_footer', 'imagemin', 'ewebp', 'run_server'));
+gulp.task('default', gulp.series('clean_dev', /* 'pug' ,*/ 'minhtml', 'move_files', 'scss_vendor_header', 'scss_vendor_footer', 'scss_header', 'scss_footer', 'js_vendor_header', 'js_vendor_footer', 'js_header', 'js_footer', 'imagemin', /*'ewebp',*/ 'run_server'));
 
 
 
